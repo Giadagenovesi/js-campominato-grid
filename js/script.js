@@ -1,11 +1,7 @@
-// L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
-// Ogni cella ha un numero progressivo, da 1 a 100.
-// Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-// Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
-
 // Creare una griglia 10x10 con i numeri da 1 a 100
 // Per ogni numero generato genero le caselle della griglia
 // Ogni volta che clicco su un quadrato questo si colora di azzurro.
+//Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà:
 
 // Dichiarazioni:
 let numberOfSquares = "";
@@ -33,7 +29,7 @@ playBtn.addEventListener("click", function() {
     }
 }) 
   
-/////////////////////////////////
+///////////////////////////////////////////////////////
 // FUNCTION
 
 //Al click del utente cambia il colore dello sfondo del quadrato
