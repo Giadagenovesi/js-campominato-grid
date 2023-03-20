@@ -6,10 +6,11 @@
 // Dichiarazioni:
 let numberOfSquares = "";
 const difficultSelector = document.getElementById("difficult");
-
 const playBtn = document.querySelector(".play-btn")
 const grid = document.querySelector(".grid");
 
+
+// Al click ell'utente sul bottone si genera la griglia in base alla difficoltà scelta
 playBtn.addEventListener("click", function() {
     grid.innerHTML = "";
 
@@ -23,7 +24,8 @@ playBtn.addEventListener("click", function() {
     for (let i = 1; i <= numberOfSquares; i++) {
         const square = document.createElement ("div");
         square.classList.add("square", difficultSelector.value);
-        square.innerHTML = i;
+        square.innerHTML = `<span>${i}</span>`;
+        //Al click sul singolo quadrato cambia il colore di sfondo e appare il numero nella console
         square.addEventListener("click", userClick) 
         grid.append(square);
     }
@@ -34,9 +36,9 @@ playBtn.addEventListener("click", function() {
 
 //Al click del utente cambia il colore dello sfondo del quadrato
 function userClick() {
-    this.classList.toggle("lightblue");
-    console.log(this.innerText);
+    this.classList.add("lightblue");
+    const clickedNumber = parseInt(this.textContent);
+    console.log(clickedNumber);
 }
-
 
 
